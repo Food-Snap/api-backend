@@ -13,7 +13,7 @@ exports.signup = async (userData) => {
   const user = {
     email: userData.email,
     password: hashedPassword,
-    name: "",
+    name: userData.name,
     gender: "",
     age: null,
     weight: null,

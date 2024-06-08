@@ -1,5 +1,5 @@
 const express = require('express');
-const { updateProfile } = require('../controllers/user');
+const { updateProfile, getProfile } = require('../controllers/user');
 const authMiddleware = require('../middlewares/auth');
 const { getProfile } = require('../services/user');
 

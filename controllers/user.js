@@ -19,3 +19,14 @@ exports.getProfile = async (req, res, next) => {
       next(error);
   }
 };
+
+exports.changePassword = async (req, res, next) => {
+  try {
+      const userId = req.user.userId; 
+      const { oldPassword, newPassword } = req.body;
+      const result = await userService.changePassword(userId, oldPassword, newPassword);
+      res.status(200).json(result);
+  } catch (error) {
+      next(error);
+  }
+};

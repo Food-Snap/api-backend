@@ -1,9 +1,7 @@
 const express = require('express');
-const multer = require('multer');
 const { predict } = require('../controllers/prediction');
 const authMiddleware = require('../middlewares/auth');
-
-const upload = multer({ storage: multer.memoryStorage() });
+const upload = require('../config/multer');
 
 const router = express.Router();
 

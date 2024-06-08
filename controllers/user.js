@@ -1,4 +1,4 @@
-const userService = require("../services/user.service");
+const userService = require("../services/user");
 
 exports.updateProfile = async (req, res, next) => {
   try {

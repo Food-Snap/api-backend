@@ -1,4 +1,4 @@
-const User = require('../models/user.model');
+const User = require('../models/user');
 
 exports.updateProfile = async (userId, profileData) => {
     const userDoc = User.doc(userId);

@@ -13,7 +13,7 @@ const historyRoutes = require('./routes/history');
 const errorMiddleware = require("./middlewares/error");
 
 const app = express();
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: "10mb"}));
 
 app.options("*", cors());
 app.use(cors());
